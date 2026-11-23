@@ -444,7 +444,7 @@
                     <div class="gb-label-sticker">
                         <div class="gb-sticker-art">
                             <img
-                                src="./super-mario-bros-deluxe-game-boy-color-front-cover.jpg"
+                                id="cover-img"
                                 alt="Capa Super Mario Bros. Deluxe"
                             >
                         </div>
@@ -501,6 +501,10 @@
     </div>
 
     <script>
+        /* Capa do jogo */
+        const COVER_FILE = 'Super mario deluxe.jpeg';
+        document.getElementById('cover-img').src = './' + encodeURI(COVER_FILE);
+
         /* Efeito 3D do cartucho */
         const card = document.getElementById('game-card');
         const cartridge = document.getElementById('cartridge3d');
@@ -530,7 +534,6 @@
         });
 
         /* Configuração dos ficheiros do repositório */
-        // ATENÇÃO: Confirma o nome exato do ficheiro .gbc no teu repositório
         const ROM_FILE = 'Super Mario Bros. Deluxe (USA, Europe) (Rev 1).gbc';
 
         const CDN_BASES = [
